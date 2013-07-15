@@ -10,7 +10,7 @@
 (defun fia/make-overlay (beg end index)
   (let ((o (make-overlay beg end nil nil t)))
     (overlay-put o 'before-string (format "%2d:" index))
-    (overlay-put o 'face '(background-color . "red"))
+    (overlay-put o 'face 'highlight)
     (setq fia/overlays (cons o fia/overlays))))
 
 (defun fia/get-open-paren (s)
