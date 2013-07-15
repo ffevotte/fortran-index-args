@@ -11,7 +11,6 @@
   (let ((o (make-overlay beg end nil nil t)))
     (overlay-put o 'before-string (format "%2d:" index))
     (overlay-put o 'face '(background-color . "red"))
-    (setq index (1+ index))
     (setq fia/overlays (cons o fia/overlays))))
 
 (defun fia/get-open-paren (s)
@@ -54,5 +53,6 @@
             (forward-sexp)
           (error (setq end (point)))))
       (fia/make-overlay beg (point) index)
+      (setq index (1+ index))
       (fia/skip-blanks)
       (fia/skip-comma))))
