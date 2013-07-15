@@ -46,12 +46,44 @@ C ...
 
 ## Installation
 
-just drop `fortran-index-args.el` somewhere and `load` it.
+Just drop `fortran-index-args.el` somewhere and `load` it.
+
+```lisp
+(load "/path/to/fortran-index-args.el")
+```
+
 
 ## Usage
 
 
 1. place point in a subroutine arguments list
-2. run `M-x fia/display` to display arguments indices
-3. run `M-x fia/cleanup` to remove indices and return to the previous view of
+2. call `M-x fia/display` to display arguments indices
+3. call `M-x fia/cleanup` to remove indices and return to the previous view of
    the buffer.
+
+Alternatively, call `M-x fia/toggle` to toggle subroutine arguments indexing.
+
+
+## Customization
+
+You might want to bind `fia/toggle` to a convenient key. For example:
+
+```lisp
+(define-key fortran-mode-map (kbd "C-c i") 'fia/toggle)
+```
+
+## License
+
+Copyright (C) 2013 François Févotte.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program.  If not, see <http://www.gnu.org/licenses/>.
