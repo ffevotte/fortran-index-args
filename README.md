@@ -12,7 +12,7 @@ its counterpart in the call.
 before each argument in the list. Such indexes are just displayed on screen, but
 do not modify the underlying buffer.
 
-Example:
+Example ([screencast](http://showterm.io/f5554b8857041dd28dd38#slow)):
 
 ```fortran
 C Subroutine definition
