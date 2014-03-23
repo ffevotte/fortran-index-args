@@ -116,4 +116,6 @@ the 6th character of the following line."
     (forward-char)))
 
 
+(provide 'fortran-index-args)
+
 ;;; fortran-index-args.el ends here
